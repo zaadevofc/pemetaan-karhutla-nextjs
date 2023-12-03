@@ -12,6 +12,7 @@
 # next.js
 /.next/
 /out/
+.env
 
 # production
 /build
@@ -36,3 +37,5 @@ yarn-error.log*
 next-env.d.ts
 
 .vercel
+
+.prettierrc
