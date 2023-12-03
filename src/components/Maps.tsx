@@ -1,4 +1,4 @@
-import { GoogleMap, useLoadScript } from '@react-google-maps/api';
+import { GoogleMap, MarkerF, useLoadScript } from '@react-google-maps/api';
 import { useSession } from 'next-auth/react';
 import { useEffect, useMemo, useState } from 'react';
 import useGeoLocation from '~/hooks/useGeolocation';
@@ -78,7 +78,7 @@ const Maps = ({ width = '100%', height = '100vh', setIsiData, addLayer }: { widt
   return (
     <>
       <GoogleMap onClick={mapClick} clickableIcons={true} options={mapOptions} zoom={location.zoom} center={location} mapTypeId={google.maps.MapTypeId.ROADMAP} mapContainerStyle={{ width, height }}>
-        {/* {(session && list) && [...list.data, isMark].map((x: any) => <MarkerF position={{ lat: parseFloat(x.latitude), lng: parseFloat(x.longitude) }} />)} */}
+        {session && list && [...list.data, isMark].map((x: any) => <MarkerF position={{ lat: parseFloat(x.latitude), lng: parseFloat(x.longitude) }} />)}
         <div className="absolute p-4">
           <h1 onClick={() => setCurrentLoc()} className="fbtn">
             Lokasi

@@ -2,6 +2,7 @@
 
 import { useSession } from 'next-auth/react';
 import { useRouter } from 'next/navigation';
+import Maps from '~/components/Maps';
 import Container from '../components/Container';
 
 export default async function Page () {
@@ -20,7 +21,7 @@ export default async function Page () {
           </h1>
         </nav>
         <section className="mt-10">
-          {/* <Maps /> */}
+          <Maps />
         </section>
       </Container>
       <footer className="mt-16 flex justify-center p-4">

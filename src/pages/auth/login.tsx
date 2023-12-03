@@ -2,7 +2,7 @@ import { signIn } from 'next-auth/react';
 import Image from 'next/image';
 import Container from '../../components/Container';
 
-export default async function Page () {
+export default async function Login () {
   return (
     <>
       <Container className="h-screen items-center justify-center p-5">

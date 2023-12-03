@@ -5,7 +5,7 @@ import Footer from '../../components/Footer';
 import Navbar from '../../components/Navbar';
 import Sidebar from '../../components/Sidebar';
 
-export default function Page() {
+export default async function Page() {
   return (
     <>
       <section className="flex flex-col">

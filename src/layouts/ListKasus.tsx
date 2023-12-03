@@ -2,6 +2,7 @@
 import { useEffect, useState } from 'react';
 import { FiCheckCircle, FiCoffee, FiRefreshCw } from 'react-icons/fi';
 import { HiOutlinePencilAlt, HiOutlineTrash } from 'react-icons/hi';
+import Maps from '~/components/Maps';
 import useAddKasus from '~/hooks/useAddKasus';
 import useListKasus from '~/hooks/useListKasus';
 import useRemoveKasus from '~/hooks/useRemoveKasus';
@@ -183,7 +184,7 @@ const ListKasus = () => {
         </div>
 
         <div className="w-full">
-          {/* <Maps width={'600px'} height={'550px'} setIsiData={setIsiData} addLayer={addLayer} /> */}
+          <Maps width={'600px'} height={'550px'} setIsiData={setIsiData} addLayer={addLayer} />
         </div>
       </div>
     </>
