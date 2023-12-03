@@ -1,9 +1,9 @@
 'use client';
 
 import ListKasus from '~/layouts/ListKasus';
-import Footer from '../../../components/Footer';
-import Navbar from '../../../components/Navbar';
-import Sidebar from '../../../components/Sidebar';
+import Footer from '../../components/Footer';
+import Navbar from '../../components/Navbar';
+import Sidebar from '../../components/Sidebar';
 
 export default function Page() {
   return (

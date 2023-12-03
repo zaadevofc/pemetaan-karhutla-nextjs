@@ -8,7 +8,7 @@ const randomStr = Math.random().toString(36).substring(2, 10);
 const Maps = ({ width = '100%', height = '100vh', setIsiData, addLayer }: { width?: any; height?: any; setIsiData?: any; addLayer?: any }) => {
   const { data: session } = useSession();
   const { data, setData, mutate } = useGeoLocation();
-  const { data: list, mutate: load } = useListKasus();
+  const { data: list, mutate: loadList } = useListKasus();
   const libraries = useMemo(() => ['places'], []);
   const [location, setLocation] = useState<any>({ lat: 7.6274, lng: 110.8928, zoom: 14 });
   const [isMark, setMark] = useState<any>({});
@@ -20,7 +20,7 @@ const Maps = ({ width = '100%', height = '100vh', setIsiData, addLayer }: { widt
         setLocation({ lat: latitude, lng: longitude, zoom: 11 });
       });
     }
-    (async () => await load())();
+    (async () => await loadList())();
   }, []);
 
   const setCurrentLoc = () => {

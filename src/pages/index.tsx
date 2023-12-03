@@ -2,12 +2,11 @@
 
 import { useSession } from 'next-auth/react';
 import { useRouter } from 'next/navigation';
-import Container from '../../components/Container';
+import Container from '../components/Container';
 
 export default async function Page () {
-  const { data: session, status } = useSession();
+  const { status } = useSession();
   let isAuth = status == 'unauthenticated';
-  status == 'unauthenticated';
   const router = useRouter();
 
   // if (status == 'loading') return <Loading />

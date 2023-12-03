@@ -1,6 +1,6 @@
 import { signIn } from 'next-auth/react';
 import Image from 'next/image';
-import Container from '../../../components/Container';
+import Container from '../../components/Container';
 
 export default async function Page () {
   return (
