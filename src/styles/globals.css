@@ -2,26 +2,26 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+* {
+  font-family: 'poppins';
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+.hide-scroll::-webkit-scrollbar {
+  @apply h-0 w-0;
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.hide-scroll::-webkit-scrollbar-thumb {
+  @apply !rounded-none;
+}
+
+.fbtn {
+  @apply w-fit rounded-xl border border-orange-600 bg-orange-500 px-4 py-2 text-white shadow-md active:scale-[.97] md:cursor-pointer;
+}
+
+.side-btn-active {
+  @apply flex flex-row items-center gap-4 border-l-2 !border-l-orange-600 p-2 px-3 font-semibold text-orange-600 md:cursor-pointer;
+}
+
+.side-btn {
+  @apply flex flex-row items-center gap-4 p-2 px-3 hover:border-l-2 hover:!border-l-orange-600 hover:pl-[10.5px] hover:text-orange-600 md:cursor-pointer;
 }
